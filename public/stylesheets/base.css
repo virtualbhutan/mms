@@ -31,7 +31,7 @@ li {
 
 #top { 
   color: #ccc; 
-  padding: 0 20px; 
+  padding: 5px 20px; 
   font-size: .84em; 
   text-align: right; 
   margin-top: 0;
@@ -82,7 +82,7 @@ h4 {
 h4>a, h4>a:visited { color: #404040; }
 
 h3 {
-  padding: 6px 7px; 
+  padding: 0 7px; 
   margin: 5px 15px 5px 0; 
   font-size: 18px;
   float: center;
