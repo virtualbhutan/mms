@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090801005507) do
+ActiveRecord::Schema.define(:version => 20100309074720) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -347,14 +347,14 @@ ActiveRecord::Schema.define(:version => 20090801005507) do
     t.text     "recording_note"
     t.text     "private_note"
     t.string   "type",                     :limit => 10, :null => false
-    t.integer  "attachment_id",                          :null => false
+    t.integer  "attachment_id"
     t.datetime "taken_on"
     t.integer  "recording_orientation_id"
     t.integer  "capture_device_model_id"
     t.string   "partial_taken_on"
   end
 
-  add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id", :unique => true
+  add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id"
 
   create_table "media_administrative_locations", :force => true do |t|
     t.integer "medium_id",                            :null => false

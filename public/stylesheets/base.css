@@ -130,7 +130,7 @@ a.collapsable { text-decoration: none }
   margin: 0 auto;
   border: solid 1px black;
   padding: 5px 40px;
-  background:#FFFFFF url(../images/bg.gif) repeat-x;
+  background:#FFFFFF url(../images/topbg.gif) repeat-x;
 }
 
 .footer td {
