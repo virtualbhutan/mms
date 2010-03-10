@@ -91,7 +91,7 @@ h3 {
   background: #C25301 url(../images/bg.png) repeat-x left bottom;
 }
 
-h3>a, h3>a:visited { color: #595B5D; }
+h3>a, h3>a:visited { color: #fff; }
 
 h2 {
   font-size: 20px;

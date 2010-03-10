@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100309074720) do
+ActiveRecord::Schema.define(:version => 20100310060934) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -535,6 +535,14 @@ ActiveRecord::Schema.define(:version => 20100309074720) do
   end
 
   add_index "sponsors", ["title"], :name => "index_sponsors_on_title", :unique => true
+
+  create_table "titles", :force => true do |t|
+    t.string   "title",       :null => false
+    t.integer  "medium_id",   :null => false
+    t.integer  "language_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "transformations", :force => true do |t|
     t.integer "renderer_id",                :null => false
