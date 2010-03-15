@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090801005507) do
+ActiveRecord::Schema.define(:version => 20100311031503) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -347,14 +347,14 @@ ActiveRecord::Schema.define(:version => 20090801005507) do
     t.text     "recording_note"
     t.text     "private_note"
     t.string   "type",                     :limit => 10, :null => false
-    t.integer  "attachment_id",                          :null => false
+    t.integer  "attachment_id"
     t.datetime "taken_on"
     t.integer  "recording_orientation_id"
     t.integer  "capture_device_model_id"
     t.string   "partial_taken_on"
   end
 
-  add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id", :unique => true
+  add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id"
 
   create_table "media_administrative_locations", :force => true do |t|
     t.integer "medium_id",                            :null => false
@@ -536,6 +536,15 @@ ActiveRecord::Schema.define(:version => 20090801005507) do
 
   add_index "sponsors", ["title"], :name => "index_sponsors_on_title", :unique => true
 
+  create_table "titles", :force => true do |t|
+    t.string   "title",       :null => false
+    t.integer  "creator_id"
+    t.integer  "medium_id",   :null => false
+    t.integer  "language_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "transformations", :force => true do |t|
     t.integer "renderer_id",                :null => false
     t.string  "title",       :limit => 20,  :null => false
@@ -544,6 +553,15 @@ ActiveRecord::Schema.define(:version => 20090801005507) do
 
   add_index "transformations", ["path"], :name => "index_transformations_on_path", :unique => true
   add_index "transformations", ["renderer_id", "title"], :name => "index_transformations_on_renderer_id_and_title", :unique => true
+
+  create_table "translated_titles", :force => true do |t|
+    t.string   "title",       :null => false
+    t.integer  "creator_id"
+    t.integer  "title_id",    :null => false
+    t.integer  "language_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "typescripts", :force => true do |t|
     t.string  "content_type"

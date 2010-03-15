@@ -55,3 +55,6 @@
 [submodule "vendor/plugins/virtualbhutan_engine"]
 	path = vendor/plugins/virtualbhutan_engine
 	url = git://github.com/virtualbhutan/virtualbhutan_engine.git
+[submodule "vendor/plugins/attachment_fu_patch"]
+	path = vendor/plugins/attachment_fu_patch
+	url = git://github.com/thl/attachment_fu_patch.git
