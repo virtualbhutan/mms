@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100310060934) do
+ActiveRecord::Schema.define(:version => 20100311031503) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -538,6 +538,7 @@ ActiveRecord::Schema.define(:version => 20100310060934) do
 
   create_table "titles", :force => true do |t|
     t.string   "title",       :null => false
+    t.integer  "creator_id"
     t.integer  "medium_id",   :null => false
     t.integer  "language_id", :null => false
     t.datetime "created_at"
@@ -552,6 +553,15 @@ ActiveRecord::Schema.define(:version => 20100310060934) do
 
   add_index "transformations", ["path"], :name => "index_transformations_on_path", :unique => true
   add_index "transformations", ["renderer_id", "title"], :name => "index_transformations_on_renderer_id_and_title", :unique => true
+
+  create_table "translated_titles", :force => true do |t|
+    t.string   "title",       :null => false
+    t.integer  "creator_id"
+    t.integer  "title_id",    :null => false
+    t.integer  "language_id", :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "typescripts", :force => true do |t|
     t.string  "content_type"
