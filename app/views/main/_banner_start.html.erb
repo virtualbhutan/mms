@@ -3,7 +3,7 @@
     <tr>
       <td width="2%">&nbsp;</td>
       <td width="21%"><%= link_to ts('home.this'), root_path %></td>
-      <td width="21%"><%= link_to link_to 'Media', media_path %></td>
+      <td width="21%"><%= link_to Medium.human_name(:count => :many).titleize.s, media_path %></td>
       <td width="14%"><div id="div_admin-links">
 <%=     authorized_only(hash_for_admin_path) {link_to 'Administration', admin_path} %>
       </div></td>
