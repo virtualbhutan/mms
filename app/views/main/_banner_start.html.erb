@@ -6,7 +6,7 @@
 		</div>
 		<ul id="menu">
 			<li class="current"><%= link_to ts('home.this'), root_path %></li>
-			<li><%= link_to 'Media', media_path %></li>
+			<li><%= link_to Medium.human_name(:count => :many).titleize.s, media_path %></li>
 			<li><%= authorized_only(hash_for_admin_path) {link_to 'Administration', admin_path} %>
          </li>
 		</ul>
