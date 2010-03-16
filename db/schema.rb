@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100315091720) do
+ActiveRecord::Schema.define(:version => 20100311055552) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -118,6 +118,19 @@ ActiveRecord::Schema.define(:version => 20100315091720) do
 
   add_index "category_registered_theme_associations", ["category_id", "registered_theme_id"], :name => "by_category_registered_theme", :unique => true
   add_index "category_registered_theme_associations", ["permalink"], :name => "index_category_registered_theme_associations_on_permalink", :unique => true
+
+  create_table "citations", :force => true do |t|
+    t.integer  "reference_id",                :null => false
+    t.string   "reference_type",              :null => false
+    t.integer  "creator_id"
+    t.integer  "medium_id"
+    t.integer  "page_number"
+    t.string   "page_side",      :limit => 5
+    t.integer  "line_number"
+    t.text     "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "comatose_pages", :force => true do |t|
     t.integer  "parent_id"

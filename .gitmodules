@@ -58,3 +58,6 @@
 [submodule "vendor/plugins/attachment_fu_patch"]
 	path = vendor/plugins/attachment_fu_patch
 	url = git://github.com/thl/attachment_fu_patch.git
+[submodule "vendor\\plugins\\attachment_fu_patch"]
+	path = vendor\\plugins\\attachment_fu_patch
+	url = git://github.com/thl/attachment_fu_patch.git
