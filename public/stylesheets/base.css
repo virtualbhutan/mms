@@ -10,6 +10,7 @@ body {
   padding:0px;
   font-size:0.8em;
   background:#FFFFFF url(../images/topbg.gif) repeat-x;
+  padding-top: 2px;
 }
 
 .line { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 5px; }
@@ -82,16 +83,17 @@ h4 {
 h4>a, h4>a:visited { color: #404040; }
 
 h3 {
-  padding: 0 7px; 
+  padding: 7px; 
   margin: 5px 15px 5px 0; 
   font-size: 18px;
   float: center;
   color : #fff;
   font-weight: normal;
   background: #C25301 url(../images/bg.png) repeat-x left bottom;
+  vertical-align: center;
 }
 
-h3>a, h3>a:visited { color: #fff; }
+h3>a, h3>a:visited { color: #595B5D; }
 
 h2 {
   font-size: 20px;
