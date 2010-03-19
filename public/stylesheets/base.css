@@ -10,7 +10,6 @@ body {
   padding:0px;
   font-size:0.8em;
   background:#FFFFFF url(../images/topbg.gif) repeat-x;
-  padding-top: 2px;
 }
 
 .line { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 5px; }
