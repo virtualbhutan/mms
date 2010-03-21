@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100311055552) do
+ActiveRecord::Schema.define(:version => 20100320035754) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -49,6 +49,12 @@ ActiveRecord::Schema.define(:version => 20100311055552) do
   end
 
   add_index "affiliations", ["medium_id", "sponsor_id", "organization_id", "project_id"], :name => "by_medium_sponsor_organization_project", :unique => true
+
+  create_table "application_filters", :force => true do |t|
+    t.string   "title",      :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "application_settings", :force => true do |t|
     t.string  "title",         :limit => 30, :null => false
@@ -164,7 +170,8 @@ ActiveRecord::Schema.define(:version => 20100311055552) do
   add_index "copyrights", ["medium_id"], :name => "index_copyrights_on_medium_id", :unique => true
 
   create_table "countries", :force => true do |t|
-    t.string "title", :limit => 100, :null => false
+    t.string  "title",                 :limit => 100, :null => false
+    t.integer "application_filter_id",                :null => false
   end
 
   add_index "countries", ["title"], :name => "index_countries_on_title", :unique => true
@@ -365,6 +372,7 @@ ActiveRecord::Schema.define(:version => 20100311055552) do
     t.integer  "recording_orientation_id"
     t.integer  "capture_device_model_id"
     t.string   "partial_taken_on"
+    t.integer  "application_filter_id",                  :null => false
   end
 
   add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id"
@@ -552,7 +560,7 @@ ActiveRecord::Schema.define(:version => 20100311055552) do
   create_table "statuses", :force => true do |t|
     t.string   "title",       :null => false
     t.text     "description"
-    t.integer  "order",       :null => false
+    t.integer  "position",    :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -628,6 +636,7 @@ ActiveRecord::Schema.define(:version => 20100311055552) do
     t.integer  "sequence_order"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "status_id"
   end
 
   add_index "workflows", ["medium_id"], :name => "index_workflows_on_medium_id", :unique => true
