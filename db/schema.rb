@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100320035754) do
+ActiveRecord::Schema.define(:version => 20100811044543) do
 
   create_table "administrative_levels", :force => true do |t|
     t.string  "title",      :limit => 100, :null => false
@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(:version => 20100320035754) do
     t.datetime "created_on"
     t.integer  "order"
     t.boolean  "is_problematic",                         :default => false, :null => false
+    t.integer  "feature_id"
   end
 
   add_index "administrative_units", ["title", "administrative_level_id", "parent_id"], :name => "index_units_on_title_and_level_and_parent", :unique => true
@@ -359,6 +360,16 @@ ActiveRecord::Schema.define(:version => 20100320035754) do
 
   add_index "loan_types", ["title"], :name => "index_loan_types_on_title", :unique => true
 
+  create_table "locations", :force => true do |t|
+    t.integer "medium_id",                  :null => false
+    t.text    "spot_feature"
+    t.text    "notes"
+    t.string  "type",         :limit => 50
+    t.integer "feature_id",                 :null => false
+  end
+
+  add_index "locations", ["medium_id", "feature_id"], :name => "index_locations_on_medium_id_and_feature_id", :unique => true
+
   create_table "media", :force => true do |t|
     t.integer  "photographer_id"
     t.integer  "quality_type_id"
@@ -377,16 +388,6 @@ ActiveRecord::Schema.define(:version => 20100320035754) do
 
   add_index "media", ["type", "attachment_id"], :name => "index_media_on_type_and_attachment_id"
 
-  create_table "media_administrative_locations", :force => true do |t|
-    t.integer "medium_id",                            :null => false
-    t.integer "administrative_unit_id",               :null => false
-    t.text    "spot_feature"
-    t.text    "notes"
-    t.string  "type",                   :limit => 50
-  end
-
-  add_index "media_administrative_locations", ["medium_id", "administrative_unit_id"], :name => "index_locations_on_medium_and_unit", :unique => true
-
   create_table "media_category_associations", :force => true do |t|
     t.integer  "medium_id",   :null => false
     t.integer  "category_id", :null => false
@@ -403,6 +404,14 @@ ActiveRecord::Schema.define(:version => 20100320035754) do
   end
 
   add_index "media_keyword_associations", ["medium_id", "keyword_id"], :name => "index_media_keyword_associations_on_medium_id_and_keyword_id", :unique => true
+
+  create_table "media_publishers", :force => true do |t|
+    t.integer  "publisher_id"
+    t.integer  "medium_id"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "media_source_associations", :force => true do |t|
     t.integer  "medium_id",   :null => false
@@ -489,6 +498,14 @@ ActiveRecord::Schema.define(:version => 20100320035754) do
 
   add_index "projects", ["title"], :name => "index_projects_on_title", :unique => true
 
+  create_table "publishers", :force => true do |t|
+    t.string   "title",      :null => false
+    t.integer  "place_id"
+    t.integer  "country_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "quality_types", :force => true do |t|
     t.string "title", :limit => 10, :null => false
   end
@@ -566,13 +583,15 @@ ActiveRecord::Schema.define(:version => 20100320035754) do
   end
 
   create_table "titles", :force => true do |t|
-    t.string   "title",       :null => false
+    t.text     "title",       :null => false
     t.integer  "creator_id"
     t.integer  "medium_id",   :null => false
     t.integer  "language_id", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "titles", ["title"], :name => "title"
 
   create_table "transformations", :force => true do |t|
     t.integer "renderer_id",                :null => false
@@ -584,13 +603,15 @@ ActiveRecord::Schema.define(:version => 20100320035754) do
   add_index "transformations", ["renderer_id", "title"], :name => "index_transformations_on_renderer_id_and_title", :unique => true
 
   create_table "translated_titles", :force => true do |t|
-    t.string   "title",       :null => false
+    t.text     "title",       :null => false
     t.integer  "creator_id"
     t.integer  "title_id",    :null => false
     t.integer  "language_id", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "translated_titles", ["title"], :name => "title"
 
   create_table "typescripts", :force => true do |t|
     t.string  "content_type"
@@ -629,8 +650,8 @@ ActiveRecord::Schema.define(:version => 20100320035754) do
 
   create_table "workflows", :force => true do |t|
     t.integer  "medium_id",          :null => false
-    t.string   "original_filename",  :null => false
-    t.string   "original_medium_id"
+    t.string   "original_filename"
+    t.text     "original_medium_id", :null => false
     t.string   "other_id"
     t.string   "notes"
     t.integer  "sequence_order"
@@ -640,5 +661,6 @@ ActiveRecord::Schema.define(:version => 20100320035754) do
   end
 
   add_index "workflows", ["medium_id"], :name => "index_workflows_on_medium_id", :unique => true
+  add_index "workflows", ["original_medium_id"], :name => "original_medium_id"
 
 end
