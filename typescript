@@ -1,0 +1,2635 @@
+Script started on Mon 18 Oct 2010 10:53:49 AM BTT
+s]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ssc[K[Kcs[Kript.se[K[K[K/server start
+=> Booting Mongrel
+=> Rails 2.3.4 application starting on http://0.0.0.0:3000
+** [NewRelic] NewRelic Agent Developer Mode enabled.
+** [NewRelic] To view performance information, go to http://localhost:3000/newrelic
+** [NewRelic] New Relic RPM Agent 2.9.9 Initialized: pid = 8214
+** [NewRelic] Agent Log found in /home/sanjay/vbhutan/mms/log/newrelic_agent.log
+./script/../config/../vendor/rails/railties/lib/rails/gem_dependency.rb:119:Warning: Gem::Dependency#version_requirements is deprecated and will be removed on or after August 2010.  Use #requirement
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MediaController#index (for 127.0.0.1 at 2010-10-18 10:54:13) [GET]
+
+ArgumentError (syntax error on line 63, col 21: `	    media_publisher:'):
+  /usr/lib/ruby/1.8/yaml.rb:133:in `load'
+  /usr/lib/ruby/1.8/yaml.rb:133:in `load'
+
+Rendered rescues/_trace (129.2ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+^CExiting
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ [H[2J]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ script/server 
+=> Booting Mongrel
+=> Rails 2.3.4 application starting on http://0.0.0.0:3000
+** [NewRelic] NewRelic Agent Developer Mode enabled.
+** [NewRelic] To view performance information, go to http://localhost:3000/newrelic
+** [NewRelic] New Relic RPM Agent 2.9.9 Initialized: pid = 8248
+** [NewRelic] Agent Log found in /home/sanjay/vbhutan/mms/log/newrelic_agent.log
+./script/../config/../vendor/rails/railties/lib/rails/gem_dependency.rb:119:Warning: Gem::Dependency#version_requirements is deprecated and will be removed on or after August 2010.  Use #requirement
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MediaController#index (for 127.0.0.1 at 2010-10-18 10:56:07) [GET]
+  [4;36;1mPicture Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `media`[0m
+  [4;35;1mPicture Load (257.4ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Picture' ) ) ORDER BY RAND() LIMIT 8[0m
+  [4;36;1mVideo Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `media`[0m
+  [4;35;1mVideo Load (0.6ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Video' ) ) ORDER BY RAND() LIMIT 4[0m
+  [4;36;1mDocument Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `media`[0m
+  [4;35;1mDocument Load (1.9ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Document' ) ) ORDER BY RAND() LIMIT 4[0m
+Cache hit: application_filters_application_filter ({})
+Cache hit: application_filters_application_filter ({})
+  [4;36;1mKeyword Load (47.4ms)[0m   [0;1mSELECT keywords.*, count(*) as counted_media FROM media_keyword_associations, keywords, media WHERE keywords.id = media_keyword_associations.keyword_id AND media_keyword_associations.medium_id = media.id AND media.application_filter_id = 1 GROUP BY keywords.id HAVING counted_media > 15 ORDER BY RAND()[0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering media/index
+Rendered media_searches/_advanced (8.8ms)
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 8) [0m
+  [4;35;1mKeyword::Translation Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `keyword_translations`[0m
+  [4;36;1mKeyword::Translation Load (0.2ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 17) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 16) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 41) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 52) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 35) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 9) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 32) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 14) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 27) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 98) [0m
+  [4;36;1mKeyword::Translation Load (0.5ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 6) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 55) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 84) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 7) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 2) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 83) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 37) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 10) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 73) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 106) [0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.9ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`remember_token` = 'ad20ecbff3e033e205ffafc5a1c5f2cc6d86d12a') LIMIT 1[0m
+  [4;36;1mPermission Load (0.7ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;35;1mPermission Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered media/_main (253.4ms)
+  [4;36;1mImage Columns (12.1ms)[0m   [0;1mSHOW FIELDS FROM `images`[0m
+  [4;35;1mImage Load (1.0ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 703) [0m
+  [4;36;1mImage Load (29.2ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 703 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (128.9ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 3748) [0m
+  [4;36;1mImage Load (30.7ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 3748 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (37.4ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 4381) [0m
+  [4;36;1mImage Load (31.4ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 4381 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.4ms)
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 4378) [0m
+  [4;36;1mImage Load (31.7ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 4378 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.9ms)
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 4081) [0m
+  [4;36;1mImage Load (31.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 4081 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.4ms)
+  [4;35;1mImage Load (13.8ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 1288) [0m
+  [4;36;1mImage Load (38.2ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 1288 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (56.8ms)
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 4384) [0m
+  [4;36;1mImage Load (31.6ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 4384 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.5ms)
+  [4;35;1mImage Load (0.4ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 727) [0m
+  [4;36;1mImage Load (28.7ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 727 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (33.9ms)
+Rendered media/_media_table (413.2ms)
+  [4;35;1mMovie Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 6) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 6 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (16.4ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 21 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.3ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 16) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 16 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.2ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 11) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 11 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.0ms)
+Rendered media/_media_table (32.6ms)
+  [4;36;1mTypescript Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `typescripts`[0m
+  [4;35;1mTypescript Load (0.6ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 169) [0m
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 169 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.6ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1602) ORDER BY id[0m
+Rendered documents/_thumb_column (20.4ms)
+  [4;36;1mTypescript Load (0.1ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 178) [0m
+  [4;35;1mTypescript Load (0.1ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 178 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.1ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1605) ORDER BY id[0m
+Rendered documents/_thumb_column (6.6ms)
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 28) [0m
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 28 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1555) ORDER BY id[0m
+Rendered documents/_thumb_column (6.7ms)
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 328) [0m
+  [4;35;1mTypescript Load (0.4ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 328 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1655) ORDER BY id[0m
+Rendered documents/_thumb_column (90.7ms)
+Rendered documents/_media_table (131.5ms)
+Rendered media/_index (589.2ms)
+Rendered main/_login_status (1.1ms)
+Rendered sessions/_language_options (2.3ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered main/_banner_start (19.1ms)
+Rendered main/_flash_notice (0.9ms)
+Rendered main/_header (35.4ms)
+Rendered main/_footer (1.5ms)
+Rendered main/_layout (46.8ms)
+Completed in 1342ms (View: 700, DB: 602) | 200 OK [http://localhost/]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0703/235_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3748/1255_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4381/1466_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4378/1465_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4081/1366_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/1288/435_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4384/1467_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0727/243_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0169/1602_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0178/1605_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0028/1555_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0006/388_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0021/391_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0016/390_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0011/389_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0328/1655_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:10) [GET]
+
+ActionController::RoutingError (No route matches "/trunk/mms/images/loadingAnimation.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#admin (for 127.0.0.1 at 2010-10-18 10:56:20) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;35;1mPermission Load (0.1ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendering template within layouts/application
+Rendering main/admin
+Cache miss: application_filters_country_filter ({})
+  [4;36;1mApplicationSetting Load (0.1ms)[0m   [0;1mSELECT * FROM `application_settings` WHERE (`application_settings`.`title` = 'country_filter') LIMIT 1[0m
+  [4;35;1mApplicationFilter Load (0.1ms)[0m   [0mSELECT * FROM `application_filters` WHERE (`application_filters`.`id` = 1) [0m
+Cache write (will save 2.31ms): application_filters_country_filter
+Cache hit: application_filters_country_filter ({})
+Rendered main/_login_status (0.6ms)
+Rendered sessions/_language_options (1.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered main/_banner_start (10.1ms)
+Rendered main/_flash_notice (0.4ms)
+Rendered main/_header (15.1ms)
+Rendered main/_footer (0.8ms)
+Rendered main/_layout (17.2ms)
+Completed in 334ms (View: 314, DB: 1) | 200 OK [http://localhost/admin]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:21) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PublishersController#index (for 127.0.0.1 at 2010-10-18 10:56:22) [GET]
+  [4;35;1mPublisher Load (0.1ms)[0m   [0mSELECT * FROM `publishers` [0m
+Rendering template within layouts/application
+Rendering publishers/index
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;36;1mPublisher Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `publishers`[0m
+Cache miss: feature-5-readonlyconditionsincludeselect ({})
+Cache write (will save 1877.88ms): feature-5-readonlyconditionsincludeselect
+Cache hit: feature-5-readonlyconditionsincludeselect ({})
+Cache miss: feature-1-readonlyconditionsincludeselect ({})
+Cache write (will save 503.54ms): feature-1-readonlyconditionsincludeselect
+Cache hit: feature-1-readonlyconditionsincludeselect ({})
+Cache hit: feature-1-readonlyconditionsincludeselect ({})
+Cache hit: feature-1-readonlyconditionsincludeselect ({})
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered main/_back_to_admin_or_media (31.8ms)
+Rendered main/_login_status (0.6ms)
+Rendered sessions/_language_options (1.7ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered main/_banner_start (10.2ms)
+Rendered main/_flash_notice (0.4ms)
+Rendered main/_header (15.4ms)
+Rendered main/_footer (0.8ms)
+Rendered main/_layout (20.4ms)
+Completed in 2485ms (View: 2470, DB: 1) | 200 OK [http://localhost/publishers]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:56:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PublishersController#edit (for 127.0.0.1 at 2010-10-18 10:56:29) [GET]
+  Parameters: {"id"=>"10"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;36;1mPublisher Load (0.1ms)[0m   [0;1mSELECT * FROM `publishers` WHERE (`publishers`.`id` = 10) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`application_filter_id` = 1) [0m
+Rendering template within layouts/application
+Rendering publishers/edit
+
+ActionView::TemplateError (undefined method `get_url' for PlacesResource:Class) on line #6 of vendor/plugins/mms_engine/app/views/publishers/_form.html.erb:
+3:   <%= f.text_field :title %>
+4: </p>
+5: <p>
+6:   <b><%= Publisher.human_attribute_name('country_id').s %></b> (<%= link_to ts('browse.records', :what => 'Places Dictionary'), PlacesResource.get_url, :target => '_blank' %>)<br />
+7: <%= f.text_field :country_id %>
+8: </p>
+
+    vendor/plugins/mms_engine/app/views/publishers/_form.html.erb:6
+    vendor/plugins/mms_engine/app/views/publishers/edit.html.erb:4
+    vendor/plugins/mms_engine/app/views/publishers/edit.html.erb:3
+
+Rendered rescues/_trace (55.4ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PublishersController#edit (for 127.0.0.1 at 2010-10-18 10:56:51) [GET]
+  Parameters: {"id"=>"9"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;36;1mPublisher Load (0.1ms)[0m   [0;1mSELECT * FROM `publishers` WHERE (`publishers`.`id` = 9) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`application_filter_id` = 1) [0m
+Rendering template within layouts/application
+Rendering publishers/edit
+
+ActionView::TemplateError (undefined method `get_url' for PlacesResource:Class) on line #6 of vendor/plugins/mms_engine/app/views/publishers/_form.html.erb:
+3:   <%= f.text_field :title %>
+4: </p>
+5: <p>
+6:   <b><%= Publisher.human_attribute_name('country_id').s %></b> (<%= link_to ts('browse.records', :what => 'Places Dictionary'), PlacesResource.get_url, :target => '_blank' %>)<br />
+7: <%= f.text_field :country_id %>
+8: </p>
+
+    vendor/plugins/mms_engine/app/views/publishers/_form.html.erb:6
+    vendor/plugins/mms_engine/app/views/publishers/edit.html.erb:4
+    vendor/plugins/mms_engine/app/views/publishers/edit.html.erb:3
+
+Rendered rescues/_trace (164.6ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PublishersController#edit (for 127.0.0.1 at 2010-10-18 10:56:54) [GET]
+  Parameters: {"id"=>"5"}
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;36;1mPublisher Load (0.1ms)[0m   [0;1mSELECT * FROM `publishers` WHERE (`publishers`.`id` = 5) [0m
+  [4;35;1mCountry Load (0.1ms)[0m   [0mSELECT * FROM `countries` WHERE (`countries`.`application_filter_id` = 1) [0m
+Rendering template within layouts/application
+Rendering publishers/edit
+
+ActionView::TemplateError (undefined method `get_url' for PlacesResource:Class) on line #6 of vendor/plugins/mms_engine/app/views/publishers/_form.html.erb:
+3:   <%= f.text_field :title %>
+4: </p>
+5: <p>
+6:   <b><%= Publisher.human_attribute_name('country_id').s %></b> (<%= link_to ts('browse.records', :what => 'Places Dictionary'), PlacesResource.get_url, :target => '_blank' %>)<br />
+7: <%= f.text_field :country_id %>
+8: </p>
+
+    vendor/plugins/mms_engine/app/views/publishers/_form.html.erb:6
+    vendor/plugins/mms_engine/app/views/publishers/edit.html.erb:4
+    vendor/plugins/mms_engine/app/views/publishers/edit.html.erb:3
+
+Rendered rescues/_trace (50.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PublishersController#new (for 127.0.0.1 at 2010-10-18 10:56:58) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;36;1mCountry Load (0.1ms)[0m   [0;1mSELECT * FROM `countries` WHERE (`countries`.`application_filter_id` = 1) [0m
+Rendering template within layouts/application
+Rendering publishers/new
+
+ActionView::TemplateError (undefined method `get_url' for PlacesResource:Class) on line #6 of vendor/plugins/mms_engine/app/views/publishers/_form.html.erb:
+3:   <%= f.text_field :title %>
+4: </p>
+5: <p>
+6:   <b><%= Publisher.human_attribute_name('country_id').s %></b> (<%= link_to ts('browse.records', :what => 'Places Dictionary'), PlacesResource.get_url, :target => '_blank' %>)<br />
+7: <%= f.text_field :country_id %>
+8: </p>
+
+    vendor/plugins/mms_engine/app/views/publishers/_form.html.erb:6
+    vendor/plugins/mms_engine/app/views/publishers/new.html.erb:4
+    vendor/plugins/mms_engine/app/views/publishers/new.html.erb:3
+    vendor/plugins/mms_engine/app/controllers/publishers_controller.rb:30:in `new'
+
+Rendered rescues/_trace (163.7ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#admin (for 127.0.0.1 at 2010-10-18 10:57:08) [GET]
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendering template within layouts/application
+Rendering main/admin
+Rendered main/_login_status (0.5ms)
+Rendered sessions/_language_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered main/_banner_start (10.5ms)
+Rendered main/_flash_notice (0.4ms)
+Rendered main/_header (15.6ms)
+Rendered main/_footer (0.8ms)
+Rendered main/_layout (17.8ms)
+Completed in 55ms (View: 35, DB: 0) | 200 OK [http://localhost/admin]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:08) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MediaController#index (for 127.0.0.1 at 2010-10-18 10:57:11) [GET]
+  [4;36;1mPicture Load (210.0ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Picture' ) ) ORDER BY RAND() LIMIT 8[0m
+  [4;35;1mVideo Load (0.7ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Video' ) ) ORDER BY RAND() LIMIT 4[0m
+  [4;36;1mDocument Load (2.6ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Document' ) ) ORDER BY RAND() LIMIT 4[0m
+Cache hit: application_filters_application_filter ({})
+Cache hit: application_filters_application_filter ({})
+  [4;35;1mKeyword Load (34.6ms)[0m   [0mSELECT keywords.*, count(*) as counted_media FROM media_keyword_associations, keywords, media WHERE keywords.id = media_keyword_associations.keyword_id AND media_keyword_associations.medium_id = media.id AND media.application_filter_id = 1 GROUP BY keywords.id HAVING counted_media > 15 ORDER BY RAND()[0m
+Rendering template within layouts/application
+Rendering media/index
+Rendered media_searches/_advanced (3.9ms)
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 27) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 41) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 73) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 106) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 10) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 84) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 6) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 32) [0m
+  [4;36;1mKeyword::Translation Load (17.2ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 16) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 17) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 14) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 2) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 8) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 37) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 35) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 7) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 9) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 98) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 55) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 52) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 83) [0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;36;1mPermission Load (0.1ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered media/_main (206.9ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 724) [0m
+  [4;36;1mImage Load (29.2ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 724 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (34.3ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 1822) [0m
+  [4;36;1mImage Load (29.1ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 1822 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (34.1ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 661) [0m
+  [4;36;1mImage Load (27.9ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 661 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (32.9ms)
+  [4;35;1mImage Load (21.6ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 4708) [0m
+  [4;36;1mImage Load (40.6ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 4708 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (67.2ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 2080) [0m
+  [4;36;1mImage Load (31.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 2080 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.2ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 829) [0m
+  [4;36;1mImage Load (31.1ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 829 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.4ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 2917) [0m
+  [4;36;1mImage Load (35.8ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 2917 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (40.8ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 4789) [0m
+  [4;36;1mImage Load (32.7ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 4789 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (37.5ms)
+Rendered media/_media_table (325.5ms)
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 11) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.parent_id = 11 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.8ms)
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 6) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.parent_id = 6 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.7ms)
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 16) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.parent_id = 16 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.1ms)
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.parent_id = 1 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.2ms)
+Rendered media/_media_table (20.6ms)
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 292) [0m
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 292 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1643) ORDER BY id[0m
+Rendered documents/_thumb_column (7.1ms)
+  [4;36;1mTypescript Load (0.1ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 274) [0m
+  [4;35;1mTypescript Load (0.1ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 274 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.1ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1637) ORDER BY id[0m
+Rendered documents/_thumb_column (6.4ms)
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 61) [0m
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 61 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1566) ORDER BY id[0m
+Rendered documents/_thumb_column (7.0ms)
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 124) [0m
+  [4;35;1mTypescript Load (0.2ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 124 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1587) ORDER BY id[0m
+Rendered documents/_thumb_column (6.6ms)
+Rendered documents/_media_table (29.9ms)
+Rendered media/_index (378.4ms)
+Rendered main/_login_status (0.6ms)
+Rendered sessions/_language_options (1.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered main/_banner_start (10.0ms)
+Rendered main/_flash_notice (0.5ms)
+Rendered main/_header (106.3ms)
+Rendered main/_footer (1.1ms)
+Rendered main/_layout (108.9ms)
+Completed in 967ms (View: 395, DB: 551) | 200 OK [http://localhost/media_objects]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0724/242_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/1822/613_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0661/221_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4708/1690_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/2080/699_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0829/277_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/2917/978_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4789/1717_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0292/1643_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0274/1637_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0124/1587_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0011/389_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0006/388_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0016/390_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:12) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0001/387_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:57:13) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0061/1566_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+^CExiting
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ ^C
+]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ [H[2J]0;sanjay@sanjay-laptop: ~/vbhutan/mmssanjay@sanjay-laptop:~/vbhutan/mms$ script/server 
+=> Booting Mongrel
+=> Rails 2.3.4 application starting on http://0.0.0.0:3000
+** [NewRelic] NewRelic Agent Developer Mode enabled.
+** [NewRelic] To view performance information, go to http://localhost:3000/newrelic
+** [NewRelic] New Relic RPM Agent 2.9.9 Initialized: pid = 8338
+** [NewRelic] Agent Log found in /home/sanjay/vbhutan/mms/log/newrelic_agent.log
+./script/../config/../vendor/rails/railties/lib/rails/gem_dependency.rb:119:Warning: Gem::Dependency#version_requirements is deprecated and will be removed on or after August 2010.  Use #requirement
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MediaController#index (for 127.0.0.1 at 2010-10-18 10:59:29) [GET]
+  [4;36;1mPicture Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `media`[0m
+  [4;35;1mPicture Load (211.2ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Picture' ) ) ORDER BY RAND() LIMIT 8[0m
+  [4;36;1mVideo Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `media`[0m
+  [4;35;1mVideo Load (0.7ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Video' ) ) ORDER BY RAND() LIMIT 4[0m
+  [4;36;1mDocument Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `media`[0m
+  [4;35;1mDocument Load (1.5ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Document' ) ) ORDER BY RAND() LIMIT 4[0m
+Cache hit: application_filters_application_filter ({})
+Cache hit: application_filters_application_filter ({})
+  [4;36;1mKeyword Load (33.8ms)[0m   [0;1mSELECT keywords.*, count(*) as counted_media FROM media_keyword_associations, keywords, media WHERE keywords.id = media_keyword_associations.keyword_id AND media_keyword_associations.medium_id = media.id AND media.application_filter_id = 1 GROUP BY keywords.id HAVING counted_media > 15 ORDER BY RAND()[0m
+  [4;35;1mKeyword Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keywords`[0m
+Rendering template within layouts/application
+Rendering media/index
+Rendered media_searches/_advanced (8.9ms)
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 52) [0m
+  [4;35;1mKeyword::Translation Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `keyword_translations`[0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 32) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 17) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 16) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 37) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 2) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 8) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 10) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 98) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 27) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 7) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 83) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 14) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 9) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 55) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 73) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 106) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 6) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 84) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 35) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 41) [0m
+  [4;36;1mUser Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;35;1mPermission Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `permissions`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered media/_main (109.7ms)
+  [4;36;1mImage Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `images`[0m
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 898) [0m
+  [4;36;1mImage Load (28.2ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 898 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (38.6ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 1297) [0m
+  [4;36;1mImage Load (28.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 1297 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (33.0ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 1522) [0m
+  [4;36;1mImage Load (28.7ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 1522 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (33.5ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 3856) [0m
+  [4;36;1mImage Load (30.2ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 3856 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.4ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 4522) [0m
+  [4;36;1mImage Load (30.9ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 4522 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.8ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 1870) [0m
+  [4;36;1mImage Load (29.0ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 1870 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (34.1ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 4270) [0m
+  [4;36;1mImage Load (32.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 4270 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (38.0ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 3673) [0m
+  [4;36;1mImage Load (31.2ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 3673 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.7ms)
+Rendered media/_media_table (383.4ms)
+  [4;35;1mMovie Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `movies`[0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 21 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (17.8ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 16) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 16 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.6ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 11) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 11 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.9ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 6) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 6 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.5ms)
+Rendered media/_media_table (35.2ms)
+  [4;36;1mTypescript Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `typescripts`[0m
+  [4;35;1mTypescript Load (0.1ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 55) [0m
+  [4;36;1mTypescript Load (0.1ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 55 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.1ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1564) ORDER BY id[0m
+Rendered documents/_thumb_column (20.4ms)
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 220) [0m
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 220 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1619) ORDER BY id[0m
+Rendered documents/_thumb_column (7.3ms)
+  [4;35;1mTypescript Load (0.2ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 187) [0m
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 187 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1608) ORDER BY id[0m
+Rendered documents/_thumb_column (7.1ms)
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 67) [0m
+  [4;35;1mTypescript Load (0.2ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 67 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1568) ORDER BY id[0m
+Rendered documents/_thumb_column (7.0ms)
+Rendered documents/_media_table (49.2ms)
+Rendered media/_index (480.6ms)
+Rendered main/_login_status (14.2ms)
+Rendered sessions/_language_options (2.9ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered main/_banner_start (109.3ms)
+Rendered main/_flash_notice (0.8ms)
+Rendered main/_header (124.7ms)
+Rendered main/_footer (1.6ms)
+Rendered main/_layout (135.1ms)
+Completed in 1122ms (View: 581, DB: 499) | 200 OK [http://localhost/media_objects/]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:30) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0898/300_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/1297/438_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/1522/513_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3856/1291_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4522/1513_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/1870/629_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4270/1429_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3673/1230_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0220/1619_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0021/391_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0016/390_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0011/389_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0006/388_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0055/1564_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0187/1608_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0067/1568_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:31) [GET]
+
+ActionController::RoutingError (No route matches "/trunk/mms/images/loadingAnimation.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthenticatedSystem::SessionsController#destroy (for 127.0.0.1 at 2010-10-18 10:59:34) [GET]
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.2ms)[0m   [0;1mUPDATE `users` SET `updated_at` = '2010-10-18 04:59:34', `remember_token_expires_at` = NULL, `remember_token` = NULL WHERE `id` = 26[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/authenticated_system/logout]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MediaController#index (for 127.0.0.1 at 2010-10-18 10:59:34) [GET]
+  [4;36;1mPicture Load (211.6ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Picture' ) ) ORDER BY RAND() LIMIT 8[0m
+  [4;35;1mVideo Load (0.7ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Video' ) ) ORDER BY RAND() LIMIT 4[0m
+  [4;36;1mDocument Load (1.4ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Document' ) ) ORDER BY RAND() LIMIT 4[0m
+Cache hit: application_filters_application_filter ({})
+Cache hit: application_filters_application_filter ({})
+  [4;35;1mKeyword Load (34.8ms)[0m   [0mSELECT keywords.*, count(*) as counted_media FROM media_keyword_associations, keywords, media WHERE keywords.id = media_keyword_associations.keyword_id AND media_keyword_associations.medium_id = media.id AND media.application_filter_id = 1 GROUP BY keywords.id HAVING counted_media > 15 ORDER BY RAND()[0m
+Rendering template within layouts/application
+Rendering media/index
+Rendered media_searches/_advanced (3.9ms)
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 41) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 16) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 83) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 10) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 84) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 2) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 35) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 98) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 27) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 17) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 9) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 14) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 6) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 7) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 106) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 32) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 37) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 52) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 8) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 55) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 73) [0m
+Rendered media/_main (57.6ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 1900) [0m
+  [4;36;1mImage Load (30.6ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 1900 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.5ms)
+  [4;35;1mImage Load (12.7ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 487) [0m
+  [4;36;1mImage Load (35.8ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 487 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (53.7ms)
+  [4;35;1mImage Load (0.7ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 3964) [0m
+  [4;36;1mImage Load (29.9ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 3964 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.1ms)
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 4432) [0m
+  [4;36;1mImage Load (30.8ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 4432 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.6ms)
+  [4;35;1mImage Load (0.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 2035) [0m
+  [4;36;1mImage Load (29.0ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 2035 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (33.6ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 3769) [0m
+  [4;36;1mImage Load (31.4ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 3769 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.1ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 3046) [0m
+  [4;36;1mImage Load (30.9ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 3046 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.7ms)
+  [4;35;1mImage Load (0.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.`id` = 118) [0m
+  [4;36;1mImage Load (28.1ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.parent_id = 118 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (32.6ms)
+Rendered media/_media_table (304.2ms)
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.parent_id = 1 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (5.9ms)
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 16) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.parent_id = 16 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.2ms)
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.parent_id = 21 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (3.9ms)
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.`id` = 6) [0m
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.parent_id = 6 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (3.9ms)
+Rendered media/_media_table (20.4ms)
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 298) [0m
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 298 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1645) ORDER BY id[0m
+Rendered documents/_thumb_column (8.4ms)
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 199) [0m
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 199 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1612) ORDER BY id[0m
+Rendered documents/_thumb_column (8.0ms)
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 145) [0m
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 145 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1594) ORDER BY id[0m
+Rendered documents/_thumb_column (7.6ms)
+  [4;36;1mTypescript Load (0.1ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 34) [0m
+  [4;35;1mTypescript Load (0.1ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 34 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.1ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1557) ORDER BY id[0m
+Rendered documents/_thumb_column (6.9ms)
+Rendered documents/_media_table (34.5ms)
+Rendered media/_index (449.0ms)
+Rendered main/_login_status (0.7ms)
+Rendered sessions/_language_options (1.8ms)
+Rendered main/_banner_start (5.6ms)
+Rendered main/_flash_notice (0.4ms)
+Rendered main/_header (11.9ms)
+Rendered main/_footer (1.0ms)
+Rendered main/_layout (14.3ms)
+Completed in 803ms (View: 260, DB: 515) | 200 OK [http://localhost/]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/1900/639_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0487/163_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3964/1327_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4432/1483_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/2035/684_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3769/1262_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3046/1021_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0118/40_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0298/1645_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0199/1612_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0145/1594_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0001/387_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0016/390_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0021/391_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0006/388_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:35) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0034/1557_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:36) [GET]
+
+ActionController::RoutingError (No route matches "/trunk/mms/images/loadingAnimation.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MediaController#index (for 127.0.0.1 at 2010-10-18 10:59:36) [GET]
+  [4;35;1mPicture Load (207.8ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Picture' ) ) ORDER BY RAND() LIMIT 8[0m
+  [4;36;1mVideo Load (0.9ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Video' ) ) ORDER BY RAND() LIMIT 4[0m
+  [4;35;1mDocument Load (1.5ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Document' ) ) ORDER BY RAND() LIMIT 4[0m
+Cache hit: application_filters_application_filter ({})
+Cache hit: application_filters_application_filter ({})
+  [4;36;1mKeyword Load (34.0ms)[0m   [0;1mSELECT keywords.*, count(*) as counted_media FROM media_keyword_associations, keywords, media WHERE keywords.id = media_keyword_associations.keyword_id AND media_keyword_associations.medium_id = media.id AND media.application_filter_id = 1 GROUP BY keywords.id HAVING counted_media > 15 ORDER BY RAND()[0m
+Rendering template within layouts/application
+Rendering media/index
+Rendered media_searches/_advanced (3.8ms)
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 98) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 6) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 17) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 73) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 37) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 8) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 55) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 14) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 41) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 10) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 83) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 16) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 84) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 9) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 27) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 32) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 35) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 106) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 2) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 52) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 7) [0m
+Rendered media/_main (58.3ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 2377) [0m
+  [4;35;1mImage Load (30.8ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 2377 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.6ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 517) [0m
+  [4;35;1mImage Load (29.9ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 517 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (34.6ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 5005) [0m
+  [4;35;1mImage Load (32.8ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 5005 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (37.4ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 4969) [0m
+  [4;35;1mImage Load (31.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 4969 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.8ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 3670) [0m
+  [4;35;1mImage Load (30.6ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 3670 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.5ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 4234) [0m
+  [4;35;1mImage Load (31.0ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 4234 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.8ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 22) [0m
+  [4;35;1mImage Load (28.1ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 22 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (32.8ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 3181) [0m
+  [4;35;1mImage Load (30.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 3181 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.0ms)
+Rendered media/_media_table (288.8ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 6) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 6 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.3ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 1 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.1ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 16) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 16 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (3.9ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 21 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.5ms)
+Rendered media/_media_table (19.3ms)
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 37) [0m
+  [4;35;1mTypescript Load (0.2ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 37 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1558) ORDER BY id[0m
+Rendered documents/_thumb_column (7.5ms)
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 253) [0m
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 253 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1630) ORDER BY id[0m
+Rendered documents/_thumb_column (100.5ms)
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 112) [0m
+  [4;35;1mTypescript Load (0.2ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 112 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1583) ORDER BY id[0m
+Rendered documents/_thumb_column (7.7ms)
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 97) [0m
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 97 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.4ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1578) ORDER BY id[0m
+Rendered documents/_thumb_column (7.9ms)
+Rendered documents/_media_table (126.8ms)
+Rendered media/_index (437.4ms)
+Rendered main/_login_status (0.7ms)
+Rendered sessions/_language_options (1.8ms)
+Rendered main/_banner_start (5.8ms)
+Rendered main/_flash_notice (0.4ms)
+Rendered main/_header (12.0ms)
+Rendered main/_footer (0.9ms)
+Rendered main/_layout (14.1ms)
+Completed in 781ms (View: 262, DB: 496) | 200 OK [http://localhost/media_objects]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0517/173_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/5005/1789_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4969/1777_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3670/1229_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4234/1417_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0022/8_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3181/1066_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0037/1558_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:37) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0253/1630_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0112/1583_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0097/1578_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0006/388_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0001/387_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0016/390_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0021/391_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/trunk/mms/images/loadingAnimation.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/2377/798_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthenticatedSystem::SessionsController#new (for 127.0.0.1 at 2010-10-18 10:59:39) [GET]
+Rendering template within layouts/application
+Rendering authenticated_system/sessions/new
+Rendered main/_login_status (0.8ms)
+Rendered sessions/_language_options (1.7ms)
+Rendered main/_banner_start (5.8ms)
+Rendered main/_flash_notice (0.4ms)
+Rendered main/_header (11.6ms)
+Rendered main/_footer (0.8ms)
+Rendered main/_layout (13.7ms)
+Completed in 39ms (View: 26, DB: 0) | 200 OK [http://localhost/authenticated_system/login]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:39) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AuthenticatedSystem::SessionsController#create (for 127.0.0.1 at 2010-10-18 10:59:40) [POST]
+  Parameters: {"openid_url"=>"", "commit"=>"Sign in", "authenticity_token"=>"lLKS0urY4Phf/XuTrf3AT1kW5hIn290WjXv4iavAjgA=", "login"=>"sgurung", "password"=>"s6nj6y"}
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'sgurung') LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/authenticated_system/session]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MediaController#index (for 127.0.0.1 at 2010-10-18 10:59:40) [GET]
+  [4;35;1mPicture Load (219.3ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Picture' ) ) ORDER BY RAND() LIMIT 8[0m
+  [4;36;1mVideo Load (1.1ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Video' ) ) ORDER BY RAND() LIMIT 4[0m
+  [4;35;1mDocument Load (1.7ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Document' ) ) ORDER BY RAND() LIMIT 4[0m
+Cache hit: application_filters_application_filter ({})
+Cache hit: application_filters_application_filter ({})
+  [4;36;1mKeyword Load (35.4ms)[0m   [0;1mSELECT keywords.*, count(*) as counted_media FROM media_keyword_associations, keywords, media WHERE keywords.id = media_keyword_associations.keyword_id AND media_keyword_associations.medium_id = media.id AND media.application_filter_id = 1 GROUP BY keywords.id HAVING counted_media > 15 ORDER BY RAND()[0m
+Rendering template within layouts/application
+Rendering media/index
+Rendered media_searches/_advanced (3.6ms)
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 41) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 7) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 52) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 8) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 98) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 35) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 14) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 17) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 73) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 6) [0m
+  [4;35;1mKeyword::Translation Load (0.2ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 84) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 83) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 16) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 27) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 37) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 10) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 9) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 2) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 55) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 32) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 106) [0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;35;1mPermission Load (0.1ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered media/_main (81.9ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 1042) [0m
+  [4;35;1mImage Load (30.0ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 1042 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.2ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 4429) [0m
+  [4;35;1mImage Load (32.0ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 4429 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.8ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 4786) [0m
+  [4;35;1mImage Load (31.5ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 4786 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.4ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 1759) [0m
+  [4;35;1mImage Load (30.4ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 1759 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.1ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 3241) [0m
+  [4;35;1mImage Load (31.6ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 3241 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (37.4ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 919) [0m
+  [4;35;1mImage Load (30.0ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 919 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.1ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 1300) [0m
+  [4;35;1mImage Load (30.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 1300 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.3ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 811) [0m
+  [4;35;1mImage Load (29.8ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 811 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.2ms)
+Rendered media/_media_table (393.9ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 1 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.8ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 11) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 11 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.9ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 21 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.4ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 6) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 6 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (5.2ms)
+Rendered media/_media_table (22.1ms)
+  [4;36;1mTypescript Load (0.1ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 253) [0m
+  [4;35;1mTypescript Load (0.1ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 253 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.1ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1630) ORDER BY id[0m
+Rendered documents/_thumb_column (8.0ms)
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 94) [0m
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 94 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1577) ORDER BY id[0m
+Rendered documents/_thumb_column (7.5ms)
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 133) [0m
+  [4;35;1mTypescript Load (0.2ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 133 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1590) ORDER BY id[0m
+Rendered documents/_thumb_column (6.9ms)
+  [4;35;1mTypescript Load (0.3ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 238) [0m
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 238 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1625) ORDER BY id[0m
+Rendered documents/_thumb_column (7.5ms)
+Rendered documents/_media_table (33.0ms)
+Rendered media/_index (451.7ms)
+Rendered main/_login_status (0.6ms)
+Rendered sessions/_language_options (1.8ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered main/_banner_start (10.6ms)
+Rendered main/_flash_notice (0.3ms)
+Rendered main/_header (17.8ms)
+Rendered main/_footer (0.9ms)
+Rendered main/_layout (19.9ms)
+Completed in 842ms (View: 304, DB: 511) | 200 OK [http://localhost/]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/1042/348_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4429/1482_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4786/1716_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/1759/592_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3241/1086_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0919/307_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/1300/439_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0811/271_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0094/1577_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0133/1590_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0238/1625_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0001/387_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0011/389_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0021/391_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0006/388_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0253/1630_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/trunk/mms/images/loadingAnimation.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MediaController#index (for 127.0.0.1 at 2010-10-18 10:59:43) [GET]
+  [4;35;1mPicture Load (220.4ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Picture' ) ) ORDER BY RAND() LIMIT 8[0m
+  [4;36;1mVideo Load (0.8ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Video' ) ) ORDER BY RAND() LIMIT 4[0m
+  [4;35;1mDocument Load (1.6ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Document' ) ) ORDER BY RAND() LIMIT 4[0m
+Cache hit: application_filters_application_filter ({})
+Cache hit: application_filters_application_filter ({})
+  [4;36;1mKeyword Load (33.0ms)[0m   [0;1mSELECT keywords.*, count(*) as counted_media FROM media_keyword_associations, keywords, media WHERE keywords.id = media_keyword_associations.keyword_id AND media_keyword_associations.medium_id = media.id AND media.application_filter_id = 1 GROUP BY keywords.id HAVING counted_media > 15 ORDER BY RAND()[0m
+Rendering template within layouts/application
+Rendering media/index
+Rendered media_searches/_advanced (3.7ms)
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 9) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 10) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 83) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 8) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 17) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 52) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 7) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 14) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 84) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 32) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 6) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 27) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 16) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 37) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 73) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 41) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 2) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 106) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 55) [0m
+  [4;36;1mKeyword::Translation Load (0.1ms)[0m   [0;1mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 98) [0m
+  [4;35;1mKeyword::Translation Load (0.1ms)[0m   [0mSELECT * FROM `keyword_translations` WHERE (`keyword_translations`.`locale` IN ('en')) AND (`keyword_translations`.keyword_id = 35) [0m
+  [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;35;1mPermission Load (0.2ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered media/_main (185.9ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 4678) [0m
+  [4;35;1mImage Load (32.8ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 4678 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (37.9ms)
+  [4;36;1mImage Load (0.4ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 4816) [0m
+  [4;35;1mImage Load (31.2ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 4816 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (37.3ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 832) [0m
+  [4;35;1mImage Load (33.5ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 832 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (38.8ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 3454) [0m
+  [4;35;1mImage Load (32.8ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 3454 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (37.9ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 4585) [0m
+  [4;35;1mImage Load (31.3ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 4585 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (36.7ms)
+  [4;36;1mImage Load (0.1ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 3604) [0m
+  [4;35;1mImage Load (0.1ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 3604 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (4.6ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 4930) [0m
+  [4;35;1mImage Load (32.1ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 4930 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (37.5ms)
+  [4;36;1mImage Load (0.3ms)[0m   [0;1mSELECT * FROM `images` WHERE (`images`.`id` = 3364) [0m
+  [4;35;1mImage Load (30.7ms)[0m   [0mSELECT * FROM `images` WHERE (`images`.parent_id = 3364 AND (`images`.`thumbnail` = 'compact')) LIMIT 1[0m
+Rendered media/_thumb_column (35.5ms)
+Rendered media/_media_table (272.7ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 21) [0m
+  [4;35;1mMovie Load (0.2ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 21 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (5.4ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 11) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 11 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.4ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 6) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 6 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (5.2ms)
+  [4;36;1mMovie Load (0.1ms)[0m   [0;1mSELECT * FROM `movies` WHERE (`movies`.`id` = 1) [0m
+  [4;35;1mMovie Load (0.1ms)[0m   [0mSELECT * FROM `movies` WHERE (`movies`.parent_id = 1 AND (`movies`.`thumbnail` = 'thumb')) LIMIT 1[0m
+Rendered media/_thumb_column (4.6ms)
+Rendered media/_media_table (22.4ms)
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 160) [0m
+  [4;35;1mTypescript Load (0.5ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 160 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1599) ORDER BY id[0m
+Rendered documents/_thumb_column (7.2ms)
+  [4;35;1mTypescript Load (0.2ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 121) [0m
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 121 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.2ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1586) ORDER BY id[0m
+Rendered documents/_thumb_column (6.8ms)
+  [4;36;1mTypescript Load (0.2ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 136) [0m
+  [4;35;1mTypescript Load (0.2ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 136 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;36;1mTitle Load (0.2ms)[0m   [0;1mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1591) ORDER BY id[0m
+Rendered documents/_thumb_column (7.8ms)
+  [4;35;1mTypescript Load (0.1ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 145) [0m
+  [4;36;1mTypescript Load (0.1ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 145 AND (`typescripts`.`thumbnail` = 'thumb')) LIMIT 1[0m
+  [4;35;1mTitle Load (0.1ms)[0m   [0mSELECT * FROM `titles` WHERE (`titles`.medium_id = 1594) ORDER BY id[0m
+Rendered documents/_thumb_column (6.4ms)
+Rendered documents/_media_table (31.4ms)
+Rendered media/_index (329.2ms)
+Rendered main/_login_status (0.6ms)
+Rendered sessions/_language_options (1.7ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+Rendered main/_banner_start (10.1ms)
+Rendered main/_flash_notice (0.3ms)
+Rendered main/_header (16.0ms)
+Rendered main/_footer (0.9ms)
+Rendered main/_layout (18.1ms)
+Completed in 815ms (View: 305, DB: 488) | 200 OK [http://localhost/media_objects]
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:43) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-tabs.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/jquery-ui-tabs.css" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4678/1680_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4816/1726_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/0832/278_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3454/1157_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4585/1534_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3604/1207_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/4930/1764_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/0000/3364/1127_compact.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0021/391_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0011/389_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0006/388_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/movies/0000/0001/387_thumb.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0160/1599_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0121/1586_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0136/1591_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/typescripts/0000/0145/1594_thumb.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-10-18 10:59:44) [GET]
+
+ActionController::RoutingError (No route matches "/trunk/mms/images/loadingAnimation.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+OpenIdAuthentication.store is nil. Using in-memory store.
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MediaController#show (for 127.0.0.1 at 2010-10-18 10:59:45) [GET]
+  Parameters: {"id"=>"1599"}
+  [4;35;1mMedium Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `media`[0m
+  [4;36;1mMedium Load (0.2ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.`id` = 1599) AND (`media`.`application_filter_id` = 1) [0m
+  [4;35;1mPicture Load (212.8ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Picture' ) ) ORDER BY RAND() LIMIT 8[0m
+  [4;36;1mVideo Load (1.1ms)[0m   [0;1mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Video' ) ) ORDER BY RAND() LIMIT 1[0m
+  [4;35;1mDocument Load (1.6ms)[0m   [0mSELECT * FROM `media` WHERE (`media`.`application_filter_id` = 1) AND ( (`media`.`type` = 'Document' ) ) ORDER BY RAND() LIMIT 1[0m
+Rendering template within layouts/application
+Rendering media/show
+  [4;36;1mcaptions_media Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `captions_media`[0m
+  [4;35;1mCaption Load (14.1ms)[0m   [0mSELECT * FROM `captions` INNER JOIN `captions_media` ON `captions`.id = `captions_media`.caption_id WHERE (`captions_media`.medium_id = 1599 ) [0m
+  [4;36;1mCaption Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `captions`[0m
+  [4;35;1mComplexScripts::Language Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `languages`[0m
+  [4;36;1mComplexScripts::Language Load (0.1ms)[0m   [0;1mSELECT * FROM `languages` WHERE (`languages`.`id` = 1) [0m
+  [4;35;1mTypescript Load (0.1ms)[0m   [0mSELECT * FROM `typescripts` WHERE (`typescripts`.`id` = 160) [0m
+  [4;36;1mTypescript Load (0.3ms)[0m   [0;1mSELECT * FROM `typescripts` WHERE (`typescripts`.parent_id = 160 AND (`typescripts`.`thumbnail` = 'normal')) LIMIT 1[0m
+Rendered documents/_show (6.4ms)
+  [4;35;1mTitle Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `titles`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM `titles` WHERE (`titles`.medium_id = 1599) [0m
+Rendered titles/_index_display_only (4.2ms)
+  [4;35;1mUser Load (0.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 26) LIMIT 1[0m
+  [4;36;1mPermission Load (0.2ms)[0m   [0;1mSELECT permissions.* FROM permissions, permissions_roles, roles_users WHERE permissions.id = permissions_roles.permission_id AND permissions_roles.role_id = roles_users.role_id AND roles_users.user_id = 26[0m
+  [4;35;1mMediaCategoryAssociation Load (0.4ms)[0m   [0mSELECT * FROM `media_category_associations` WHERE (`media_category_associations`.medium_id = 1599 AND (`media_category_associations`.`root_id` = 2823)) [0m
+  [4;36;1mMediaCategoryAssociation Load (0.2ms)[0m   [0;1mSELECT * FROM `media_category_associations` WHERE (`media_category_associations`.medium_id = 1599 AND (`media_category_associations`.`root_id` = 305)) [0m
+  [4;35;1mdescriptions_media Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `descriptions_media`[0m
+  [4;36;1mDescription Load (0.3ms)[0m   [0;1mSELECT * FROM `descriptions` INNER JOIN `descriptions_media` ON `descriptions`.id = `descriptions_media`.description_id WHERE (`descriptions_media`.medium_id = 1599 ) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM `keywords` INNER JOIN `media_keyword_associations` ON `keywords`.id = `media_keyword_associations`.keyword_id WHERE ((`media_keyword_associations`.medium_id = 1599)) [0m
+  [4;36;1mMediaCategoryAssociation Load (0.2ms)[0m   [0;1mSELECT * FROM `media_category_associations` WHERE (`media_category_associations`.medium_id = 1599 AND (`media_category_associations`.`root_id` = 272)) [0m
+  [4;35;1mMediaCategoryAssociation Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `media_category_associations`[0m
+Cache miss: category-4014-readonlyconditionsincludeselect ({})
+Cache write (will save 38.15ms): category-4014-readonlyconditionsincludeselect
+  [4;36;1mAffiliation Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `affiliations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `affiliations` WHERE (`affiliations`.medium_id = 1599) [0m
+  [4;36;1mCopyright Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `copyrights`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `copyrights` WHERE (`copyrights`.medium_id = 1599) [0m
+  [4;36;1mMediaSourceAssociation Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `media_source_associations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `media_source_associations` WHERE (`media_source_associations`.medium_id = 1599) [0m
+  [4;36;1mLocation Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `locations`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM `locations` WHERE (`locations`.`medium_id` = 1599) [0m
+
+ActionView::TemplateError (undefined method `get_url' for PlacesResource:Class) on line #134 of vendor/plugins/mms_engine/app/views/media/_show.html.erb:
+131: 
+132: <%
+133:   associated_resources = [
+134:     ["Places", @medium.feature_count, @medium.places_url],
+135:     ["Topics", @medium.category_count(:cumulative => true), @medium.kmaps_url]
+136:   ]
+137: %>
+
+    vendor/plugins/mms_engine/app/models/medium.rb:100:in `places_url'
+    vendor/plugins/mms_engine/app/views/media/_show.html.erb:134
+    vendor/plugins/mms_engine/app/views/media/show.html.erb:2
+    vendor/plugins/mms_engine/app/
