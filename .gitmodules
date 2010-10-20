@@ -64,3 +64,6 @@
 [submodule "vendor/plugins/places_integration"]
 	path = vendor/plugins/places_integration
 	url = http://github.com/thl/places_integration.git
+[submodule "vendor/plugins/active_resource_extensions"]
+	path = vendor/plugins/active_resource_extensions
+	url = http://github.com/thl/active_resource_extensions.git
